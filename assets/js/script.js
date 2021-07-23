@@ -1,15 +1,26 @@
 
 
 //declare game variables//
-// let round = 0;
+let round = 0;
 let score = 0;
 let highScore = [];
-const startButton = document.getElementById("start");
-const topleft = document.getElementById("topleft");
 let num = 4;
 let userSequence = [];
 let computerSequence = [];
+let flash;
+let turn;
+let good;
+let compTurn
+let intervalId;
+let noise = true;
+let win;
 
+
+const startButton = document.getElementById("start");
+const topLeft = document.getElementById("topleft");
+const topRight = document.getElementById("topright");
+const bottomLeft = document.getElementById("bottomleft");
+const bottomRight = document.getElementById("bottomright");
 //upon clicking startButton, game console clears and new game sequence is played//
 
 startButton.addEventListener("click", startGame);
